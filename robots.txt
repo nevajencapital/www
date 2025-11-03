@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://nevajen.github.io/sitemap.xml
