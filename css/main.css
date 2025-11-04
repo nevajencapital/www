@@ -110,6 +110,31 @@ strong {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
 }
 
+.page-hero {
+  background: linear-gradient(140deg, rgba(35, 52, 70, 0.92), rgba(86, 115, 149, 0.88));
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.32);
+  margin: 1.6rem 0 2.6rem;
+  padding: 2.8rem 0;
+}
+
+.page-hero .container {
+  text-align: center;
+}
+
+.page-hero h1 {
+  color: var(--white);
+  font-size: clamp(1.9rem, 3vw, 2.6rem);
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+
+.page-hero__lead {
+  margin: 0 auto;
+  max-width: 780px;
+  color: rgba(255, 255, 255, 0.85);
+}
+
 h1 {
   font-weight: 800;
   color: var(--white);
@@ -591,6 +616,15 @@ body.not-found-page a {
 
   .logo-text {
     display: block;
+  }
+
+  .page-hero {
+    margin: 1.2rem 0 2.2rem;
+    padding: 2.2rem 0;
+  }
+
+  .page-hero__lead {
+    font-size: 0.95rem;
   }
 }
 
