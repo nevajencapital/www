@@ -1,13 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://nevajen.github.io/www/index.html</loc></url>
-  <url><loc>https://nevajen.github.io/www/about.html</loc></url>
-  <url><loc>https://nevajen.github.io/www/contact.html</loc></url>
-  <url><loc>https://nevajen.github.io/www/services.html</loc></url>
-  <url><loc>https://nevajen.github.io/www/faq.html</loc></url>
-  <url><loc>https://nevajen.github.io/__MACOSX/www/._index.html</loc></url>
-  <url><loc>https://nevajen.github.io/__MACOSX/www/._about.html</loc></url>
-  <url><loc>https://nevajen.github.io/__MACOSX/www/._contact.html</loc></url>
-  <url><loc>https://nevajen.github.io/__MACOSX/www/._services.html</loc></url>
-  <url><loc>https://nevajen.github.io/__MACOSX/www/._faq.html</loc></url>
+  <url><loc>https://www.nevajencapital.com/index.html</loc></url>
+  <url><loc>https://www.nevajencapital.com/about.html</loc></url>
+  <url><loc>https://www.nevajencapital.com/contact.html</loc></url>
+  <url><loc>https://www.nevajencapital.com/services.html</loc></url>
+  <url><loc>https://www.nevajencapital.com/faq.html</loc></url>
 </urlset>
