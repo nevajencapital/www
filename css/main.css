@@ -112,13 +112,11 @@ strong {
 
 .page-hero {
   background: linear-gradient(140deg, rgba(35, 52, 70, 0.92), rgba(86, 115, 149, 0.88));
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.32);
-  margin: 1.6rem 0 2.6rem;
-  padding: 2.8rem 0;
-}
-
-.page-hero .container {
+  margin: 1.75rem 0 2.6rem;
+  padding: 2.8rem 1.8rem;
   text-align: center;
 }
 
@@ -620,7 +618,7 @@ body.not-found-page a {
 
   .page-hero {
     margin: 1.2rem 0 2.2rem;
-    padding: 2.2rem 0;
+    padding: 2.2rem 1.4rem;
   }
 
   .page-hero__lead {
