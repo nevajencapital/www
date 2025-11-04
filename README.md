@@ -14,7 +14,7 @@
 You have two easy options for grabbing the current state of the project:
 
 1. **Using Git (recommended if the repo is already connected):**
-   - Clone the repo the first time with `git clone https://github.com/<username>/<repo>.git`.
+   - Clone the repo the first time with `git clone --branch main https://github.com/<username>/<repo>.git www` to check out the `main` branch directly into a folder named `www`.
    - Pull in these edits later with `git pull origin work` (replace `work` with your branch name if different).
    - Git automatically downloads only the changes since your last pull, so you always stay in sync.
 2. **Downloading a ZIP from GitHub:**
