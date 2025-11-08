@@ -1,0 +1,18 @@
+<svg width="176" height="44" viewBox="0 0 176 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="navyGradient" x1="14" y1="6" x2="82" y2="38" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#172436"/>
+      <stop offset="1" stop-color="#2F4B67"/>
+    </linearGradient>
+    <linearGradient id="goldGradient" x1="92" y1="8" x2="140" y2="36" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#EACF87"/>
+      <stop offset="1" stop-color="#C99C3D"/>
+    </linearGradient>
+  </defs>
+  <rect x="4" y="4" width="72" height="36" rx="12" fill="url(#navyGradient)"/>
+  <path d="M24 30V14H29.5L40 29.5V14H45V30H39.5L29 14.5V30H24Z" fill="#F6F7FB"/>
+  <path d="M52 30V14H58L64.5 21.5L71 14H77V30H71V22.4L64.5 29.6L58 22.4V30H52Z" fill="#F6F7FB"/>
+  <path d="M88 22C88 12.058 96.058 4 106 4C114.041 4 120.69 8.913 123.46 16.018L117.687 18.757C115.756 14.074 111.188 10.8 106 10.8C100.352 10.8 95.8 15.316 95.8 20.968C95.8 26.62 100.352 31.2 106 31.2C111.083 31.2 115.576 28.023 117.611 23.514L123.45 26.233C120.709 33.224 114.085 38 106 38C96.058 38 88 31.014 88 22Z" fill="url(#goldGradient)"/>
+  <path d="M128.667 30V14H137.443C141.901 14 145.123 16.976 145.123 21.1C145.123 25.224 141.901 28.2 137.443 28.2H134.187V30H128.667ZM134.187 22.648H137.243C138.886 22.648 139.963 21.676 139.963 21.1C139.963 20.524 138.886 19.552 137.243 19.552H134.187V22.648Z" fill="#F6F7FB"/>
+  <path d="M150.039 30V14H155.559V19.432L160.871 14H167.455L160.223 21.004L168 30H161.063L155.559 23.566V30H150.039Z" fill="#F6F7FB"/>
+</svg>

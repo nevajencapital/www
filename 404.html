@@ -14,7 +14,23 @@
   <link rel="manifest" href="/site.webmanifest">
 </head>
 <body class="not-found-page">
-  <h1>Page not found</h1>
-  <p>Return to <a href="index.html">Home</a>.</p>
+  <div id="header"></div>
+
+  <main class="not-found container">
+    <h1>Page not found</h1>
+    <p>Return to <a href="index.html">Home</a>.</p>
+  </main>
+
+  <div id="footer"></div>
+
+  <script>
+  async function include(file, elementId) {
+    const res = await fetch(file)
+    const html = await res.text()
+    document.getElementById(elementId).innerHTML = html
+  }
+  include('includes/header.html', 'header')
+  include('includes/footer.html', 'footer')
+  </script>
 </body>
 </html>

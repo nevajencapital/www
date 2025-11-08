@@ -79,7 +79,9 @@ strong {
 }
 
 .logo img {
-  height: 44px;
+  height: clamp(32px, 5vw, 44px);
+  width: auto;
+  max-width: 100%;
   display: block;
 }
 
@@ -591,11 +593,15 @@ body.not-found-page {
   background: var(--blue);
   color: var(--white);
   text-align: center;
-  padding: 12vh 2rem;
+  padding: 0;
 }
 
 body.not-found-page a {
   color: var(--gold);
+}
+
+body.not-found-page .not-found {
+  padding: 12vh 2rem;
 }
 
 @media (max-width: 720px) {
@@ -617,12 +623,9 @@ body.not-found-page a {
     font-size: 0.9rem;
   }
 
-  .logo img {
-    display: none;
-  }
-
-  .logo-text {
-    display: block;
+  .logo {
+    width: 100%;
+    justify-content: flex-start;
   }
 
   .hero,
