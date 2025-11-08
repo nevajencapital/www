@@ -80,6 +80,8 @@ strong {
 
 .logo img {
   height: 44px;
+  width: auto;
+  max-width: 100%;
   display: block;
 }
 
