@@ -266,6 +266,119 @@ body.services-page .grid-3 {
   opacity: 0.9;
 }
 
+.key-competences {
+  text-align: center;
+}
+
+.key-competences__timeline {
+  --icon-size: 56px;
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  position: relative;
+  margin-top: 2rem;
+  padding-bottom: 0.5rem;
+}
+
+.key-competences__timeline::before {
+  content: "";
+  position: absolute;
+  top: calc(var(--icon-size) / 2);
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--gold);
+  z-index: 0;
+}
+
+.competence-node {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.75rem;
+  position: relative;
+  padding: 0 0.6rem;
+}
+
+.competence-node__icon {
+  width: var(--icon-size);
+  height: var(--icon-size);
+  border: 2px solid var(--gold);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  transition: transform 0.3s ease;
+  z-index: 1;
+}
+
+.competence-node:hover .competence-node__icon {
+  transform: scale(1.05);
+}
+
+.competence-node__icon svg {
+  width: 32px;
+  height: 32px;
+  stroke: var(--gold);
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+}
+
+.competence-node h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 0.2rem;
+}
+
+.competence-node p {
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .key-competences__timeline {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .key-competences__timeline {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 0.5rem;
+    margin-top: 1.5rem;
+  }
+
+  .key-competences__timeline::before {
+    left: calc(var(--icon-size) / 2);
+    right: auto;
+    width: 2px;
+    height: 100%;
+    top: 0;
+  }
+
+  .competence-node {
+    text-align: left;
+    align-items: flex-start;
+    padding-left: calc(var(--icon-size) + 1.2rem);
+    min-height: var(--icon-size);
+    gap: 0.4rem;
+  }
+
+  .competence-node__icon {
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin-bottom: 0;
+  }
+}
+
 .footer {
   border-top: 1px solid var(--line);
   text-align: center;
