@@ -624,14 +624,22 @@ body.services-page .pill {
 }
 
 .service-hero {
-  text-align: left;
-  padding: 3.2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 3.5rem 1.5rem;
+}
+
+.container-narrow {
+  max-width: 900px;
 }
 
 .service-layout {
   display: grid;
-  grid-template-columns: minmax(280px, 420px) minmax(0, 1fr);
-  gap: 2.4rem;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.2rem;
   align-items: start;
 }
 
@@ -647,15 +655,15 @@ body.services-page .pill {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 0.65rem;
   margin: 0;
 }
 
 .service-bullets li {
   position: relative;
-  padding-left: 1.35rem;
+  padding-left: 1.2rem;
   color: rgba(255, 255, 255, 0.9);
-  line-height: 1.75;
+  line-height: 1.7;
 }
 
 .service-bullets li::before {
@@ -667,22 +675,63 @@ body.services-page .pill {
   font-weight: 900;
 }
 
-.service-tags {
+.service-info-cards {
   display: flex;
   flex-direction: column;
-  gap: 0.8rem;
-  margin-top: 1.2rem;
+  gap: 1rem;
 }
 
-.service-tags .tag {
-  background: rgba(200, 159, 58, 0.18);
-  border: 1px dashed var(--gold);
+.info-card {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 1.1rem 1.2rem;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.04);
   color: var(--white);
-  font-weight: 800;
-  border-radius: 12px;
-  padding: 0.85rem 1rem;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 6px 18px rgba(0, 0, 0, 0.22);
 }
+
+.info-card__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.15);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  color: var(--gold);
+  font-size: 1.1rem;
+}
+
+.info-card__text {
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.94);
+}
+
+.info-card strong {
+  color: var(--white);
+}
+
+.info-card--slate {
+  background: linear-gradient(135deg, rgba(40, 58, 77, 0.9), rgba(78, 104, 133, 0.9));
+}
+
+.info-card--gold {
+  background: linear-gradient(135deg, rgba(200, 159, 58, 0.32), rgba(200, 159, 58, 0.16));
+  border-color: rgba(200, 159, 58, 0.45);
+  color: var(--white);
+}
+
+.info-card--indigo {
+  background: linear-gradient(135deg, rgba(56, 70, 107, 0.9), rgba(35, 52, 70, 0.9));
+}
+
+.info-card--blue {
+  background: linear-gradient(135deg, rgba(51, 100, 140, 0.9), rgba(24, 51, 79, 0.92));
+}
+
 
 .service-description {
   background: var(--veil);
@@ -690,6 +739,11 @@ body.services-page .pill {
   border-radius: 18px;
   padding: 2rem;
   box-shadow: 0 10px 26px rgba(0, 0, 0, 0.25);
+}
+
+.service-description--standalone {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .service-description p {
