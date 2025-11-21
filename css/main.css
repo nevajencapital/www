@@ -594,6 +594,7 @@ body.services-page .badge i {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   column-gap: 16px;
   row-gap: 0;
+  position: relative;
 }
 
 .accordion-item {
@@ -674,12 +675,20 @@ body.services-page .badge i {
   align-self: flex-end;
 }
 
-.accordion-row-lip {
-  grid-column: 1 / -1;
+.accordion-indicator {
+  position: absolute;
+  width: 5px;
   height: 0;
-  background: linear-gradient(180deg, #192638 0%, #243449 50%, #0D1620 90%);
-  border-radius: 16px 16px 0 0;
-  transition: height 0.25s ease;
+  background: var(--gold);
+  border-radius: 999px;
+  opacity: 0;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+}
+
+.accordion-indicator.visible {
+  opacity: 1;
 }
 
 .accordion-body-panel {
@@ -753,10 +762,6 @@ body.services-page .badge i {
   font-weight: 700;
   font-size: 0.9rem;
   letter-spacing: 0.01em;
-}
-
-.accordion-row.row-open .accordion-row-lip {
-  height: 8px;
 }
 
 .accordion-body-panel.open {

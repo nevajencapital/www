@@ -595,6 +595,7 @@ body.services-page .badge i {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   column-gap: 16px;
   row-gap: 0;
+  position: relative;
 }
 
 .accordion-item {
@@ -701,14 +702,20 @@ body.services-page .badge i {
   z-index: 1;
 }
 
-.accordion-row-lip {
-  grid-column: 1 / -1;
+.accordion-indicator {
+  position: absolute;
+  width: 5px;
   height: 0;
   background: var(--gold);
-  border-radius: 0;
+  border-radius: 999px;
   opacity: 0;
-  transform: translateY(-6px);
-  transition: height 0.15s ease, opacity 0.15s ease, transform 0.15s ease;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+}
+
+.accordion-indicator.visible {
+  opacity: 1;
 }
 
 .accordion-body-panel {
@@ -784,12 +791,6 @@ body.services-page .badge i {
   letter-spacing: 0.01em;
 }
 
-.accordion-row.row-open .accordion-row-lip {
-  height: 8px;
-  opacity: 1;
-  transform: translateY(0);
-}
-
 .accordion-body-panel.open {
   padding-top: 0;
   opacity: 1;
@@ -801,16 +802,7 @@ body.services-page .badge i {
 }
 
 .accordion-header.is-open {
-  border-color: var(--gold);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.28);
-}
-
-.accordion-header.is-open::before {
-  filter: brightness(1.25);
-}
-
-.services-accordion-grid.has-open .accordion-header:not(.is-open)::before {
-  opacity: 0.9;
+  border-color: transparent;
 }
 
 body.services-page .divider {

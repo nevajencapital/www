@@ -89,7 +89,7 @@
                                 </span>
                             </button>
                         </div>
-                        <div class="accordion-row-lip" aria-hidden="true"></div>
+                        <div class="accordion-indicator" aria-hidden="true"></div>
                         <div class="accordion-body-panel" id="accordion-body-investor" aria-hidden="true">
                             <div class="accordion-body">
                                 <h4>Overview</h4>
@@ -168,7 +168,7 @@
                                 </span>
                             </button>
                         </div>
-                        <div class="accordion-row-lip" aria-hidden="true"></div>
+                        <div class="accordion-indicator" aria-hidden="true"></div>
                         <div class="accordion-body-panel" id="accordion-body-capital" aria-hidden="true">
                             <div class="accordion-body">
                                 <h4>Overview</h4>
@@ -240,7 +240,7 @@
                                 </span>
                             </button>
                         </div>
-                        <div class="accordion-row-lip" aria-hidden="true"></div>
+                        <div class="accordion-indicator" aria-hidden="true"></div>
                         <div class="accordion-body-panel" id="accordion-body-trade" aria-hidden="true">
                             <div class="accordion-body">
                                 <h4>Overview</h4>
@@ -328,8 +328,36 @@
         document.addEventListener('DOMContentLoaded', () => {
           const headers = Array.from(document.querySelectorAll('.accordion-header'))
           const bodies = Array.from(document.querySelectorAll('.accordion-body-panel'))
-          const rows = Array.from(document.querySelectorAll('.accordion-row'))
-          const grid = document.querySelector('.services-accordion-grid')
+          const indicators = Array.from(document.querySelectorAll('.accordion-indicator'))
+
+          const updateIndicator = (row, header, body) => {
+            if (!row || !header || !body) return
+            const indicator = row.querySelector('.accordion-indicator')
+            if (!indicator) return
+
+            const barWidth = 5
+            indicator.style.width = `${barWidth}px`
+
+            const headerLeft = header.offsetLeft + header.offsetWidth / 2 - barWidth / 2
+            const top = header.offsetTop + header.offsetHeight
+            const bodyTop = body.offsetTop
+            const bodyPaddingTop = parseFloat(getComputedStyle(body).paddingTop) || 0
+
+            indicator.style.left = `${headerLeft}px`
+            indicator.style.top = `${top}px`
+            indicator.style.height = `${Math.max(bodyTop + bodyPaddingTop - top, 0)}px`
+            indicator.classList.add('visible')
+          }
+
+          const clearIndicators = () => {
+            indicators.forEach((indicator) => {
+              indicator.classList.remove('visible')
+              indicator.style.height = '0px'
+              indicator.style.left = ''
+              indicator.style.top = ''
+              indicator.style.width = ''
+            })
+          }
 
           const scrollToHeader = (header) => {
             if (!header) return
@@ -347,17 +375,13 @@
               trigger.setAttribute('aria-expanded', 'false')
             })
 
-            rows.forEach((row) => row.classList.remove('row-open'))
-
             bodies.forEach((body) => {
               body.classList.remove('open')
               body.style.maxHeight = '0px'
               body.setAttribute('aria-hidden', 'true')
             })
 
-            if (grid) {
-              grid.classList.remove('has-open')
-            }
+            clearIndicators()
           }
 
           headers.forEach((header) => {
@@ -381,15 +405,6 @@
 
               resetAll()
 
-              const row = header.closest('.accordion-row')
-              if (row) {
-                row.classList.add('row-open')
-              }
-
-              if (grid) {
-                grid.classList.add('has-open')
-              }
-
               const targetHeight = targetBody.scrollHeight
               targetBody.style.maxHeight = '0px'
 
@@ -397,6 +412,9 @@
                 targetBody.classList.add('open')
                 targetBody.style.maxHeight = `${targetHeight}px`
                 targetBody.setAttribute('aria-hidden', 'false')
+
+                const row = header.closest('.accordion-row')
+                updateIndicator(row, header, targetBody)
               })
 
               header.classList.add('is-open')
@@ -410,6 +428,11 @@
               if (event.propertyName === 'max-height') {
                 if (body.classList.contains('open')) {
                   body.style.maxHeight = 'none'
+                  const activeHeader = document.querySelector(`.accordion-header[data-target="${body.id}"]`)
+                  if (activeHeader) {
+                    const row = activeHeader.closest('.accordion-row')
+                    updateIndicator(row, activeHeader, body)
+                  }
                 } else {
                   body.style.maxHeight = '0px'
                 }
@@ -419,8 +442,13 @@
 
           window.addEventListener('resize', () => {
             const openBody = document.querySelector('.accordion-body-panel.open')
+            const activeHeader = document.querySelector('.accordion-header.is-open')
             if (openBody) {
               openBody.style.maxHeight = `${openBody.scrollHeight}px`
+              if (activeHeader) {
+                const row = activeHeader.closest('.accordion-row')
+                updateIndicator(row, activeHeader, openBody)
+              }
             }
           })
         })
