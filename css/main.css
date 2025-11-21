@@ -117,6 +117,11 @@ body.services-page .menu a[href="services.html"] {
   background: transparent;
 }
 
+.services-shell {
+  max-width: 1040px;
+  margin: 0 auto;
+}
+
 .hero {
   background: linear-gradient(135deg, rgba(35, 52, 70, 0.9), rgba(106, 139, 174, 0.9));
   border-radius: 18px;
@@ -207,6 +212,10 @@ h1 {
 
 .section {
   padding: 3rem 0;
+}
+
+.services-section {
+  padding-top: 0.25rem;
 }
 
 h2 {
@@ -583,7 +592,6 @@ body.services-page .badge i {
 .accordion-item {
   background: transparent;
   border-radius: 16px;
-  overflow: hidden;
 }
 
 .accordion-header {
@@ -592,14 +600,15 @@ body.services-page .badge i {
   outline: none;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 0.45rem;
+  align-items: flex-start;
+  gap: 0.4rem;
   background: linear-gradient(135deg, rgba(35, 52, 70, 0.96), rgba(66, 89, 116, 0.94));
-  padding: 1.25rem 1.35rem 1.1rem;
+  padding: 1.2rem 1.35rem 1.1rem;
   color: var(--white);
   cursor: pointer;
-  text-align: center;
-  border-radius: 16px 16px 0 0;
+  text-align: left;
+  border-radius: 16px;
+  box-shadow: 0 8px 14px rgba(0, 0, 0, 0.08);
 }
 
 .accordion-badge {
@@ -631,8 +640,8 @@ body.services-page .badge i {
 .accordion-short {
   margin: 0;
   color: rgba(255, 255, 255, 0.88);
-  font-size: 0.96rem;
-  line-height: 1.6;
+  font-size: 0.95rem;
+  line-height: 1.55;
 }
 
 .accordion-arrow {
@@ -645,6 +654,7 @@ body.services-page .badge i {
   color: var(--white);
   font-size: 1rem;
   transition: transform 0.2s ease;
+  align-self: flex-end;
 }
 
 .accordion-body {
@@ -654,7 +664,15 @@ body.services-page .badge i {
   max-height: 0;
   opacity: 0;
   border-radius: 0 0 16px 16px;
-  transition: max-height 0.25s ease, opacity 0.25s ease, padding 0.25s ease;
+  transition: max-height 0.28s ease, opacity 0.28s ease, padding 0.28s ease;
+}
+
+.accordion-body h4 {
+  margin: 0 0 0.5rem;
+  color: var(--white);
+  font-weight: 800;
+  font-size: 1rem;
+  letter-spacing: 0.01em;
 }
 
 .accordion-body p {
@@ -666,10 +684,10 @@ body.services-page .badge i {
 .accordion-list {
   list-style: none;
   padding: 0;
-  margin: 0 0 0.8rem;
+  margin: 0.1rem 0 0.8rem;
   display: flex;
   flex-direction: column;
-  gap: 0.35rem;
+  gap: 0.3rem;
 }
 
 .accordion-list li {
@@ -681,7 +699,7 @@ body.services-page .badge i {
 }
 
 .accordion-list i {
-  color: var(--gold);
+  color: var(--white);
   margin-top: 0.12rem;
   font-size: 0.85rem;
 }
@@ -693,10 +711,10 @@ body.services-page .badge i {
 }
 
 .highlight-tag {
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   color: rgba(255, 255, 255, 0.94);
-  padding: 0.3rem 0.6rem;
+  padding: 0.32rem 0.64rem;
   border-radius: 999px;
   font-weight: 700;
   font-size: 0.85rem;
@@ -705,9 +723,9 @@ body.services-page .badge i {
 
 .accordion-body.open,
 .accordion-item.open .accordion-body {
-  padding: 1.1rem 1.35rem 1.25rem;
+  padding: 1.05rem 1.35rem 1.2rem;
   opacity: 1;
-  max-height: 1200px;
+  overflow: visible;
 }
 
 .accordion-item.open .accordion-arrow {
