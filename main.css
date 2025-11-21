@@ -107,6 +107,12 @@ strong {
   font-size: 0.95rem;
 }
 
+.menu a.active,
+.menu a[aria-current="page"],
+body.services-page .menu a[href="services.html"] {
+  color: var(--gold);
+}
+
 .menu a:hover {
   background: rgba(200, 159, 58, 0.12);
   color: var(--gold);
@@ -456,6 +462,153 @@ body.services-page .badge i {
   color: var(--gold);
 }
 
+body.services-page .accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+body.services-page .accordion__item {
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: #1f2c3a;
+  box-shadow: 0 12px 34px rgba(0, 0, 0, 0.28);
+}
+
+body.services-page .accordion__toggle {
+  width: 100%;
+  text-align: left;
+  background: linear-gradient(135deg, rgba(35, 52, 70, 0.98), rgba(66, 93, 123, 0.98));
+  border: none;
+  color: var(--white);
+  padding: 1.3rem 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+body.services-page .accordion__toggle:hover {
+  background: linear-gradient(135deg, rgba(35, 52, 70, 1), rgba(106, 139, 174, 1));
+}
+
+body.services-page .accordion__summary {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+body.services-page .accordion__summary .badge {
+  margin: 0.2rem 0 0;
+  border-color: rgba(200, 159, 58, 0.4);
+  background: rgba(200, 159, 58, 0.18);
+  color: var(--white);
+}
+
+body.services-page .accordion__summary-text h3 {
+  color: var(--white);
+  margin: 0 0 0.35rem;
+  font-size: 1.18rem;
+  font-weight: 800;
+}
+
+body.services-page .accordion__lead {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.6;
+  font-size: 0.98rem;
+}
+
+body.services-page .accordion__icon {
+  color: var(--gold);
+  font-size: 1rem;
+  transition: transform 0.3s ease;
+}
+
+body.services-page .accordion__item.is-active .accordion__icon {
+  transform: rotate(-180deg);
+}
+
+body.services-page .accordion__body {
+  background: #1b2734;
+  padding: 0 1.4rem;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.4s ease, opacity 0.35s ease, padding 0.35s ease;
+}
+
+body.services-page .accordion__item.is-active .accordion__body {
+  padding: 1rem 1.4rem 1.3rem;
+  opacity: 1;
+  max-height: none;
+}
+
+body.services-page .accordion__body p {
+  margin: 0 0 0.8rem;
+  color: rgba(255, 255, 255, 0.92);
+  line-height: 1.7;
+}
+
+body.services-page .accordion__list {
+  list-style: none;
+  margin: 0.2rem 0 1rem;
+  padding: 0;
+  display: grid;
+  gap: 0.35rem;
+}
+
+body.services-page .accordion__list li {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.5rem;
+  align-items: start;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.95rem;
+}
+
+body.services-page .accordion__list i {
+  color: var(--gold);
+  margin-top: 0.15rem;
+  font-size: 0.9rem;
+}
+
+body.services-page .accordion__footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  margin-top: 1.1rem;
+  padding-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  align-items: center;
+}
+
+body.services-page .accordion__footer-label {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+body.services-page .accordion__highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+body.services-page .tag {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(200, 159, 58, 0.4);
+  color: var(--white);
+  padding: 0.45rem 0.75rem;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
 body.services-page .divider {
   height: 1px;
   background: rgba(255, 255, 255, 0.08);
@@ -621,6 +774,15 @@ body.not-found-page .not-found {
   .menu a {
     padding: 0.5rem 0.7rem;
     font-size: 0.9rem;
+  }
+
+  body.services-page .accordion__toggle {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  body.services-page .accordion__icon {
+    align-self: flex-end;
   }
 
   .logo {

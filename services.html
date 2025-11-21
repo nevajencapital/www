@@ -69,87 +69,317 @@
         <div class="container">
             <div class="section">
                 <h2>Services</h2>
-                <div class="grid grid-3">
-                    <div class="card">
-                        <span class="badge"
-                            ><i class="fa-solid fa-handshake"></i> Investor
-                            Access</span
+
+                <div class="accordion" role="tablist">
+                    <div class="accordion__item is-active">
+                        <button
+                            class="accordion__toggle"
+                            type="button"
+                            aria-expanded="true"
+                            aria-controls="accordion-body-1"
+                            id="accordion-header-1"
                         >
-                        <h3>Private Markets Access and Investor Management</h3>
-                        <p>
-                            Curated access to institutional investors, sovereign
-                            funds, family offices, and strategic corporates. We
-                            run targeted outreach, manage investor pipelines,
-                            and keep reporting clear and timely.
-                        </p>
+                            <div class="accordion__summary">
+                                <span class="badge"
+                                    ><i class="fa-solid fa-handshake"></i>
+                                    Investor Access</span
+                                >
+                                <div class="accordion__summary-text">
+                                    <h3>Private Markets Access and Investor Management</h3>
+                                    <p class="accordion__lead">
+                                        Targeted outreach, disciplined pipeline management, and transparent
+                                        investor communications.
+                                    </p>
+                                </div>
+                            </div>
+                            <span class="accordion__icon" aria-hidden="true">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </span>
+                        </button>
+                        <div
+                            class="accordion__body"
+                            id="accordion-body-1"
+                            role="region"
+                            aria-labelledby="accordion-header-1"
+                        >
+                            <p>
+                                We connect you with institutional investors, sovereign funds, family
+                                offices, and strategic corporates. Our team builds curated outreach
+                                plans, manages investor CRM discipline, and keeps reporting precise so
+                                relationships move from interest to commitment.
+                            </p>
+                            <ul class="accordion__list">
+                                <li><i class="fa-solid fa-angle-right"></i><span>Institutional mapping and tiered targeting plans</span></li>
+                                <li><i class="fa-solid fa-angle-right"></i><span>Investor pipeline tracking with scheduled cadences</span></li>
+                                <li><i class="fa-solid fa-angle-right"></i><span>Transparent updates and data room coordination</span></li>
+                            </ul>
+                            <div class="accordion__footer">
+                                <span class="accordion__footer-label">Highlights</span>
+                                <div class="accordion__highlights">
+                                    <span class="tag">CRM discipline</span>
+                                    <span class="tag">Sovereign &amp; institutional</span>
+                                    <span class="tag">Reporting clarity</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="card">
-                        <span class="badge"
-                            ><i class="fa-solid fa-building-columns"></i>
-                            M&amp;A</span
+                    <div class="accordion__item">
+                        <button
+                            class="accordion__toggle"
+                            type="button"
+                            aria-expanded="false"
+                            aria-controls="accordion-body-2"
+                            id="accordion-header-2"
                         >
-                        <h3>Mergers and Acquisitions Advisory</h3>
-                        <p>
-                            Buy-side and sell-side support across sourcing,
-                            valuation, modeling, due diligence packaging, and
-                            deal execution. We keep negotiations structured and
-                            documents precise.
-                        </p>
+                            <div class="accordion__summary">
+                                <span class="badge"
+                                    ><i class="fa-solid fa-building-columns"></i>
+                                    M&amp;A</span
+                                >
+                                <div class="accordion__summary-text">
+                                    <h3>Mergers and Acquisitions Advisory</h3>
+                                    <p class="accordion__lead">
+                                        Sourcing, diligence packaging, and disciplined execution on buy-side
+                                        and sell-side mandates.
+                                    </p>
+                                </div>
+                            </div>
+                            <span class="accordion__icon" aria-hidden="true">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </span>
+                        </button>
+                        <div
+                            class="accordion__body"
+                            id="accordion-body-2"
+                            role="region"
+                            aria-labelledby="accordion-header-2"
+                        >
+                            <p>
+                                From origination through closing, we manage process discipline with
+                                valuation work, models, red-flag tracking, and negotiation support. Our
+                                documentation and communication keep counterparties aligned and decision
+                                makers equipped.
+                            </p>
+                            <ul class="accordion__list">
+                                <li><i class="fa-solid fa-angle-right"></i><span>Deal sourcing and strategic fit assessments</span></li>
+                                <li><i class="fa-solid fa-angle-right"></i><span>Valuation modeling and scenario analysis</span></li>
+                                <li><i class="fa-solid fa-angle-right"></i><span>Execution playbooks with stakeholder updates</span></li>
+                            </ul>
+                            <div class="accordion__footer">
+                                <span class="accordion__footer-label">Highlights</span>
+                                <div class="accordion__highlights">
+                                    <span class="tag">Structured process</span>
+                                    <span class="tag">Modeling rigor</span>
+                                    <span class="tag">Negotiation support</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="card">
-                        <span class="badge"
-                            ><i class="fa-solid fa-coins"></i> Capital</span
+                    <div class="accordion__item">
+                        <button
+                            class="accordion__toggle"
+                            type="button"
+                            aria-expanded="false"
+                            aria-controls="accordion-body-3"
+                            id="accordion-header-3"
                         >
-                        <h3>Equity, Debt, and Structured Capital Solutions</h3>
-                        <p>
-                            Design of optimal capital stacks, from senior debt
-                            to mezzanine, convertibles, and equity. We align
-                            covenants and terms with use of proceeds and
-                            timeline.
-                        </p>
+                            <div class="accordion__summary">
+                                <span class="badge"
+                                    ><i class="fa-solid fa-coins"></i> Capital</span
+                                >
+                                <div class="accordion__summary-text">
+                                    <h3>Equity, Debt, and Structured Capital Solutions</h3>
+                                    <p class="accordion__lead">
+                                        Capital stack design aligned to covenants, use of proceeds, and
+                                        timeline.
+                                    </p>
+                                </div>
+                            </div>
+                            <span class="accordion__icon" aria-hidden="true">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </span>
+                        </button>
+                        <div
+                            class="accordion__body"
+                            id="accordion-body-3"
+                            role="region"
+                            aria-labelledby="accordion-header-3"
+                        >
+                            <p>
+                                We architect equity, debt, and hybrid structures that balance cost of
+                                capital with flexibility. Our work spans senior debt, mezzanine, convertibles,
+                                and equity to ensure terms support both growth and governance.
+                            </p>
+                            <ul class="accordion__list">
+                                <li><i class="fa-solid fa-angle-right"></i><span>Capital stack modeling with covenant alignment</span></li>
+                                <li><i class="fa-solid fa-angle-right"></i><span>Investor and lender outreach with materials prep</span></li>
+                                <li><i class="fa-solid fa-angle-right"></i><span>Term sheet negotiation and execution tracking</span></li>
+                            </ul>
+                            <div class="accordion__footer">
+                                <span class="accordion__footer-label">Highlights</span>
+                                <div class="accordion__highlights">
+                                    <span class="tag">Structured capital</span>
+                                    <span class="tag">Flexible terms</span>
+                                    <span class="tag">Investor-ready packs</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="card">
-                        <span class="badge"
-                            ><i class="fa-solid fa-shield-halved"></i>
-                            Diligence</span
+                    <div class="accordion__item">
+                        <button
+                            class="accordion__toggle"
+                            type="button"
+                            aria-expanded="false"
+                            aria-controls="accordion-body-4"
+                            id="accordion-header-4"
                         >
-                        <h3>Due Diligence and Risk Assessment</h3>
-                        <p>
-                            Commercial, financial, and operational checks with
-                            red‑flag tracking and mitigation plans. Clear,
-                            decision‑ready summaries for investment committees.
-                        </p>
+                            <div class="accordion__summary">
+                                <span class="badge"
+                                    ><i class="fa-solid fa-shield-halved"></i>
+                                    Diligence</span
+                                >
+                                <div class="accordion__summary-text">
+                                    <h3>Due Diligence and Risk Assessment</h3>
+                                    <p class="accordion__lead">
+                                        Commercial, financial, and operational checks with clear decision
+                                        summaries.
+                                    </p>
+                                </div>
+                            </div>
+                            <span class="accordion__icon" aria-hidden="true">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </span>
+                        </button>
+                        <div
+                            class="accordion__body"
+                            id="accordion-body-4"
+                            role="region"
+                            aria-labelledby="accordion-header-4"
+                        >
+                            <p>
+                                We coordinate cross-functional diligence with structured checklists,
+                                specialist inputs, and mitigation plans. Findings are presented as
+                                concise, decision-ready outputs for investment committees.
+                            </p>
+                            <ul class="accordion__list">
+                                <li><i class="fa-solid fa-angle-right"></i><span>Commercial, financial, and operational review tracks</span></li>
+                                <li><i class="fa-solid fa-angle-right"></i><span>Risk register with ownership and remediation plans</span></li>
+                                <li><i class="fa-solid fa-angle-right"></i><span>Executive-ready findings and red-flag summaries</span></li>
+                            </ul>
+                            <div class="accordion__footer">
+                                <span class="accordion__footer-label">Highlights</span>
+                                <div class="accordion__highlights">
+                                    <span class="tag">Red-flag tracking</span>
+                                    <span class="tag">Specialist inputs</span>
+                                    <span class="tag">Committee-ready</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="card">
-                        <span class="badge"
-                            ><i class="fa-solid fa-truck-fast"></i> Trade</span
+                    <div class="accordion__item">
+                        <button
+                            class="accordion__toggle"
+                            type="button"
+                            aria-expanded="false"
+                            aria-controls="accordion-body-5"
+                            id="accordion-header-5"
                         >
-                        <h3>Strategic Trade and Commodity Transactions</h3>
-                        <p>
-                            Procurement and structured trade for metals, energy,
-                            and industrials. Procedures, documentation, and
-                            logistics aligned to counterparties and
-                            jurisdiction.
-                        </p>
+                            <div class="accordion__summary">
+                                <span class="badge"
+                                    ><i class="fa-solid fa-truck-fast"></i> Trade</span
+                                >
+                                <div class="accordion__summary-text">
+                                    <h3>Strategic Trade and Commodity Transactions</h3>
+                                    <p class="accordion__lead">
+                                        Structured procurement and logistics alignment for metals, energy,
+                                        and industrials.
+                                    </p>
+                                </div>
+                            </div>
+                            <span class="accordion__icon" aria-hidden="true">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </span>
+                        </button>
+                        <div
+                            class="accordion__body"
+                            id="accordion-body-5"
+                            role="region"
+                            aria-labelledby="accordion-header-5"
+                        >
+                            <p>
+                                We structure and oversee transactions with clear procedures, documented
+                                terms, and logistics that adapt to counterparties and jurisdictions. The
+                                focus is predictable delivery and aligned expectations end-to-end.
+                            </p>
+                            <ul class="accordion__list">
+                                <li><i class="fa-solid fa-angle-right"></i><span>Commodity sourcing and qualification</span></li>
+                                <li><i class="fa-solid fa-angle-right"></i><span>Contracting, performance security, and inspections</span></li>
+                                <li><i class="fa-solid fa-angle-right"></i><span>Shipping coordination with milestone tracking</span></li>
+                            </ul>
+                            <div class="accordion__footer">
+                                <span class="accordion__footer-label">Highlights</span>
+                                <div class="accordion__highlights">
+                                    <span class="tag">Structured trade</span>
+                                    <span class="tag">Logistics control</span>
+                                    <span class="tag">Counterparty alignment</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="card">
-                        <span class="badge"
-                            ><i class="fa-solid fa-truck-fast"></i>
-                            Support</span
+                    <div class="accordion__item">
+                        <button
+                            class="accordion__toggle"
+                            type="button"
+                            aria-expanded="false"
+                            aria-controls="accordion-body-6"
+                            id="accordion-header-6"
                         >
-                        <h3>Advisory and Execution Support</h3>
-                        <p>
-                            Advisory and hands-on execution for data room setup,
-                            investor materials, and transaction documentation.
-                            We help prepare, organize, and present information
-                            that strengthens positioning and accelerates deal
-                            progress.
-                        </p>
+                            <div class="accordion__summary">
+                                <span class="badge"
+                                    ><i class="fa-solid fa-briefcase"></i> Support</span
+                                >
+                                <div class="accordion__summary-text">
+                                    <h3>Advisory and Execution Support</h3>
+                                    <p class="accordion__lead">
+                                        Hands-on execution for materials, data rooms, and deal momentum
+                                        management.
+                                    </p>
+                                </div>
+                            </div>
+                            <span class="accordion__icon" aria-hidden="true">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </span>
+                        </button>
+                        <div
+                            class="accordion__body"
+                            id="accordion-body-6"
+                            role="region"
+                            aria-labelledby="accordion-header-6"
+                        >
+                            <p>
+                                We roll up our sleeves to prepare data rooms, investor materials, and
+                                transaction documentation. Our team keeps workflows organized so sponsors
+                                and counterparties stay coordinated and timelines stay on track.
+                            </p>
+                            <ul class="accordion__list">
+                                <li><i class="fa-solid fa-angle-right"></i><span>Data room build, structure, and QA</span></li>
+                                <li><i class="fa-solid fa-angle-right"></i><span>Presentation, teaser, and IM development</span></li>
+                                <li><i class="fa-solid fa-angle-right"></i><span>Documentation checklists with status tracking</span></li>
+                            </ul>
+                            <div class="accordion__footer">
+                                <span class="accordion__footer-label">Highlights</span>
+                                <div class="accordion__highlights">
+                                    <span class="tag">Execution support</span>
+                                    <span class="tag">Investor materials</span>
+                                    <span class="tag">Timeline control</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -190,9 +420,44 @@
           const res = await fetch(file)
           const html = await res.text()
           document.getElementById(elementId).innerHTML = html
+          return document.getElementById(elementId)
         }
-        include('includes/header.html', 'header')
+        include('includes/header.html', 'header').then(() => {
+          const servicesLink = document.querySelector('.menu a[href="services.html"]')
+          if (servicesLink) {
+            servicesLink.classList.add('active')
+            servicesLink.setAttribute('aria-current', 'page')
+          }
+        })
         include('includes/footer.html', 'footer')
+
+        document.addEventListener('DOMContentLoaded', () => {
+          const accordionItems = document.querySelectorAll('.accordion__item')
+
+          accordionItems.forEach((item) => {
+            const toggle = item.querySelector('.accordion__toggle')
+            const body = item.querySelector('.accordion__body')
+
+            if (item.classList.contains('is-active')) {
+              body.style.maxHeight = `${body.scrollHeight}px`
+              toggle.setAttribute('aria-expanded', 'true')
+            }
+
+            toggle.addEventListener('click', () => {
+              accordionItems.forEach((other) => {
+                if (other !== item) {
+                  other.classList.remove('is-active')
+                  other.querySelector('.accordion__toggle').setAttribute('aria-expanded', 'false')
+                  other.querySelector('.accordion__body').style.maxHeight = 0
+                }
+              })
+
+              const isActive = item.classList.toggle('is-active')
+              toggle.setAttribute('aria-expanded', isActive)
+              body.style.maxHeight = isActive ? `${body.scrollHeight}px` : 0
+            })
+          })
+        })
         </script>
     </body>
 </html>
