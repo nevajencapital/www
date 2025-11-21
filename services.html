@@ -68,28 +68,43 @@
 
         <div class="container">
             <div class="section services-section">
-                <div class="services-shell">
-                    <h2>Services</h2>
-                    <div class="services-accordion">
+                <h2>Services</h2>
+                <div class="services-accordion-grid">
+                    <div class="accordion-row">
                         <div class="accordion-item">
-                            <button class="accordion-header" aria-expanded="false">
+                            <button class="accordion-header" data-target="accordion-body-investor" aria-expanded="false">
                                 <span class="accordion-badge">
                                     <i class="fa-solid fa-handshake"></i> Investor Access
                                 </span>
                                 <h3>Private Markets Access and Investor Management</h3>
                                 <p class="accordion-short">
-                                    Curated access to institutional investors, sovereign funds, family offices, and
-                                    strategic corporates.
+                                    Curated access to institutional investors, sovereign funds, family offices, and strategic corporates.
                                 </p>
                                 <span class="accordion-arrow" aria-hidden="true">
                                     <i class="fa-solid fa-angle-down"></i>
                                 </span>
                             </button>
-                            <div class="accordion-body" aria-hidden="true">
+                        </div>
+                        <div class="accordion-item">
+                            <button class="accordion-header" data-target="accordion-body-ma" aria-expanded="false">
+                                <span class="accordion-badge">
+                                    <i class="fa-solid fa-building-columns"></i> M&amp;A
+                                </span>
+                                <h3>Mergers and Acquisitions</h3>
+                                <p class="accordion-short">
+                                    We provide exclusive buy and sell side deals with advisory, diligence, and financing support.
+                                </p>
+                                <span class="accordion-arrow" aria-hidden="true">
+                                    <i class="fa-solid fa-angle-down"></i>
+                                </span>
+                            </button>
+                        </div>
+                        <div class="accordion-row-divider" aria-hidden="true"></div>
+                        <div class="accordion-body-panel" id="accordion-body-investor" aria-hidden="true">
+                            <div class="accordion-body">
                                 <h4>Overview</h4>
                                 <p>
-                                    We run targeted outreach, manage investor pipelines, and keep reporting clear and
-                                    timely so stakeholders stay aligned at every milestone.
+                                    We run targeted outreach, manage investor pipelines, and keep reporting clear and timely so stakeholders stay aligned at every milestone.
                                 </p>
                                 <h4>Key Services</h4>
                                 <ul class="accordion-list">
@@ -105,24 +120,13 @@
                                 </div>
                             </div>
                         </div>
-
-                        <div class="accordion-item">
-                            <button class="accordion-header" aria-expanded="false">
-                                <span class="accordion-badge">
-                                    <i class="fa-solid fa-building-columns"></i> M&amp;A
-                                </span>
-                                <h3>Mergers and Acquisitions</h3>
-                                <p class="accordion-short">
-                                    We provide exclusive buy and sell side deals with advisory, diligence, and financing support.
-                                </p>
-                                <span class="accordion-arrow" aria-hidden="true">
-                                    <i class="fa-solid fa-angle-down"></i>
-                                </span>
-                            </button>
-                            <div class="accordion-body" aria-hidden="true">
+                        <div class="accordion-body-panel" id="accordion-body-ma" aria-hidden="true">
+                            <div class="accordion-body">
                                 <h4>Overview</h4>
                                 <p>
                                     Deals move faster when both sides are matched with intent and prepared with solid information. The mandate begins with identifying the right counterparties, followed by shaping the project story, financial logic, and materials so conversations stay productive from the first call onward.
+                                </p>
+                                <p>
                                     We typically operate in the 20 to 100 million range, with a sweet spot around 50 million, but we also support projects outside this frame when the structure and quality make sense. Once engagement starts, we support valuation work, data preparation, and the full deal process so both sides stay aligned. We also provide access to sponsors to finance the deal.
                                 </p>
                                 <h4>Key Services</h4>
@@ -143,26 +147,43 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
 
+                    <div class="accordion-row">
                         <div class="accordion-item">
-                            <button class="accordion-header" aria-expanded="false">
+                            <button class="accordion-header" data-target="accordion-body-capital" aria-expanded="false">
                                 <span class="accordion-badge">
                                     <i class="fa-solid fa-coins"></i> Capital
                                 </span>
                                 <h3>Equity, Debt, and Structured Capital Solutions</h3>
                                 <p class="accordion-short">
-                                    Design of optimal capital stacks aligned to use of proceeds, covenants, and closing
-                                    timelines.
+                                    Design of optimal capital stacks aligned to use of proceeds, covenants, and closing timelines.
                                 </p>
                                 <span class="accordion-arrow" aria-hidden="true">
                                     <i class="fa-solid fa-angle-down"></i>
                                 </span>
                             </button>
-                            <div class="accordion-body" aria-hidden="true">
+                        </div>
+                        <div class="accordion-item">
+                            <button class="accordion-header" data-target="accordion-body-diligence" aria-expanded="false">
+                                <span class="accordion-badge">
+                                    <i class="fa-solid fa-shield-halved"></i> Diligence
+                                </span>
+                                <h3>Due Diligence and Risk Assessment</h3>
+                                <p class="accordion-short">
+                                    Commercial, financial, and operational checks with red‑flag tracking and mitigation plans.
+                                </p>
+                                <span class="accordion-arrow" aria-hidden="true">
+                                    <i class="fa-solid fa-angle-down"></i>
+                                </span>
+                            </button>
+                        </div>
+                        <div class="accordion-row-divider" aria-hidden="true"></div>
+                        <div class="accordion-body-panel" id="accordion-body-capital" aria-hidden="true">
+                            <div class="accordion-body">
                                 <h4>Overview</h4>
                                 <p>
-                                    From senior debt to mezzanine and convertibles, we balance risk, pricing, and investor
-                                    fit to secure executable term sheets.
+                                    From senior debt to mezzanine and convertibles, we balance risk, pricing, and investor fit to secure executable term sheets.
                                 </p>
                                 <h4>Key Services</h4>
                                 <ul class="accordion-list">
@@ -178,26 +199,11 @@
                                 </div>
                             </div>
                         </div>
-
-                        <div class="accordion-item">
-                            <button class="accordion-header" aria-expanded="false">
-                                <span class="accordion-badge">
-                                    <i class="fa-solid fa-shield-halved"></i> Diligence
-                                </span>
-                                <h3>Due Diligence and Risk Assessment</h3>
-                                <p class="accordion-short">
-                                    Commercial, financial, and operational checks with red‑flag tracking and mitigation
-                                    plans.
-                                </p>
-                                <span class="accordion-arrow" aria-hidden="true">
-                                    <i class="fa-solid fa-angle-down"></i>
-                                </span>
-                            </button>
-                            <div class="accordion-body" aria-hidden="true">
+                        <div class="accordion-body-panel" id="accordion-body-diligence" aria-hidden="true">
+                            <div class="accordion-body">
                                 <h4>Overview</h4>
                                 <p>
-                                    Decision‑ready summaries highlight risks, mitigations, and next steps so committees can
-                                    approve with clarity.
+                                    Decision‑ready summaries highlight risks, mitigations, and next steps so committees can approve with clarity.
                                 </p>
                                 <h4>Key Services</h4>
                                 <ul class="accordion-list">
@@ -213,26 +219,43 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
 
+                    <div class="accordion-row">
                         <div class="accordion-item">
-                            <button class="accordion-header" aria-expanded="false">
+                            <button class="accordion-header" data-target="accordion-body-trade" aria-expanded="false">
                                 <span class="accordion-badge">
                                     <i class="fa-solid fa-truck-fast"></i> Trade
                                 </span>
                                 <h3>Strategic Trade and Commodity Transactions</h3>
                                 <p class="accordion-short">
-                                    Procurement and structured trade for metals, energy, and industrials with documentation
-                                    and logistics aligned to counterparties.
+                                    Procurement and structured trade for metals, energy, and industrials with documentation and logistics aligned to counterparties.
                                 </p>
                                 <span class="accordion-arrow" aria-hidden="true">
                                     <i class="fa-solid fa-angle-down"></i>
                                 </span>
                             </button>
-                            <div class="accordion-body" aria-hidden="true">
+                        </div>
+                        <div class="accordion-item">
+                            <button class="accordion-header" data-target="accordion-body-support" aria-expanded="false">
+                                <span class="accordion-badge">
+                                    <i class="fa-solid fa-briefcase"></i> Support
+                                </span>
+                                <h3>Advisory and Execution Support</h3>
+                                <p class="accordion-short">
+                                    Hands-on execution for data room setup, investor materials, and transaction documentation that accelerates progress.
+                                </p>
+                                <span class="accordion-arrow" aria-hidden="true">
+                                    <i class="fa-solid fa-angle-down"></i>
+                                </span>
+                            </button>
+                        </div>
+                        <div class="accordion-row-divider" aria-hidden="true"></div>
+                        <div class="accordion-body-panel" id="accordion-body-trade" aria-hidden="true">
+                            <div class="accordion-body">
                                 <h4>Overview</h4>
                                 <p>
-                                    We manage procedures, letters of credit, and shipment coordination so trades clear clean
-                                    and on schedule.
+                                    We manage procedures, letters of credit, and shipment coordination so trades clear clean and on schedule.
                                 </p>
                                 <h4>Key Services</h4>
                                 <ul class="accordion-list">
@@ -248,26 +271,11 @@
                                 </div>
                             </div>
                         </div>
-
-                        <div class="accordion-item">
-                            <button class="accordion-header" aria-expanded="false">
-                                <span class="accordion-badge">
-                                    <i class="fa-solid fa-briefcase"></i> Support
-                                </span>
-                                <h3>Advisory and Execution Support</h3>
-                                <p class="accordion-short">
-                                    Hands-on execution for data room setup, investor materials, and transaction documentation
-                                    that accelerates progress.
-                                </p>
-                                <span class="accordion-arrow" aria-hidden="true">
-                                    <i class="fa-solid fa-angle-down"></i>
-                                </span>
-                            </button>
-                            <div class="accordion-body" aria-hidden="true">
+                        <div class="accordion-body-panel" id="accordion-body-support" aria-hidden="true">
+                            <div class="accordion-body">
                                 <h4>Overview</h4>
                                 <p>
-                                    We prepare, organize, and present information that strengthens positioning and keeps
-                                    teams focused on high-value decisions.
+                                    We prepare, organize, and present information that strengthens positioning and keeps teams focused on high-value decisions.
                                 </p>
                                 <h4>Key Services</h4>
                                 <ul class="accordion-list">
@@ -284,34 +292,34 @@
                             </div>
                         </div>
                     </div>
+                </div>
 
-                    <div class="divider"></div>
+                <div class="divider"></div>
 
-                    <h2>Where We Operate</h2>
-                    <div class="subgrid">
-                        <div class="pill">Europe</div>
-                        <div class="pill">India</div>
-                        <div class="pill">MENA</div>
-                        <div class="pill">Sub‑Saharan Africa</div>
-                        <div class="pill">North America</div>
-                        <div class="pill">Latin America</div>
-                        <div class="pill">South Asia</div>
-                        <div class="pill">East Asia</div>
+                <h2>Where We Operate</h2>
+                <div class="subgrid">
+                    <div class="pill">Europe</div>
+                    <div class="pill">India</div>
+                    <div class="pill">MENA</div>
+                    <div class="pill">Sub‑Saharan Africa</div>
+                    <div class="pill">North America</div>
+                    <div class="pill">Latin America</div>
+                    <div class="pill">South Asia</div>
+                    <div class="pill">East Asia</div>
 
-                    </div>
+                </div>
 
-                    <div class="divider"></div>
+                <div class="divider"></div>
 
-                    <h2>Sectors</h2>
-                    <div class="subgrid">
-                        <div class="pill">Financial Services</div>
-                        <div class="pill">Energy &amp; Resources</div>
-                        <div class="pill">Manufacturing</div>
-                        <div class="pill">Retail &amp; FMCG</div>
-                        <div class="pill">Sport </div>
-                        <div class="pill">Media</div>
-                        <div class="pill">Technology</div>
-                    </div>
+                <h2>Sectors</h2>
+                <div class="subgrid">
+                    <div class="pill">Financial Services</div>
+                    <div class="pill">Energy &amp; Resources</div>
+                    <div class="pill">Manufacturing</div>
+                    <div class="pill">Retail &amp; FMCG</div>
+                    <div class="pill">Sport </div>
+                    <div class="pill">Media</div>
+                    <div class="pill">Technology</div>
                 </div>
             </div>
         </div>
@@ -328,98 +336,90 @@
         include('includes/footer.html', 'footer')
 
         document.addEventListener('DOMContentLoaded', () => {
-          const accordionItems = Array.from(document.querySelectorAll('.accordion-item'))
+          const headers = Array.from(document.querySelectorAll('.accordion-header'))
+          const bodies = Array.from(document.querySelectorAll('.accordion-body-panel'))
+          const rows = Array.from(document.querySelectorAll('.accordion-row'))
 
           const scrollToHeader = (header) => {
+            if (!header) return
             const nav = document.querySelector('.header')
             const navHeight = nav ? nav.getBoundingClientRect().height : 0
-            const topOffset = 12
+            const topOffset = 16
             const headerTop = header.getBoundingClientRect().top + window.scrollY - navHeight - topOffset
 
             window.scrollTo({ top: Math.max(headerTop, 0), behavior: 'smooth' })
           }
 
-          const setBodyState = (body, isOpen) => {
-            if (!body) return
-            if (isOpen) {
-              body.style.display = 'block'
-              const fullHeight = body.scrollHeight
+          const resetAll = () => {
+            headers.forEach((trigger) => {
+              trigger.classList.remove('is-open')
+              trigger.setAttribute('aria-expanded', 'false')
+            })
+
+            rows.forEach((row) => row.classList.remove('row-open'))
+
+            bodies.forEach((body) => {
+              body.classList.remove('open')
               body.style.maxHeight = '0px'
-              body.style.opacity = '0'
-
-              requestAnimationFrame(() => {
-                body.classList.add('open')
-                body.style.maxHeight = `${fullHeight}px`
-                body.style.opacity = '1'
-                body.setAttribute('aria-hidden', 'false')
-              })
-            } else {
-              const currentHeight = body.scrollHeight
-              body.style.maxHeight = `${currentHeight}px`
-
-              requestAnimationFrame(() => {
-                body.classList.remove('open')
-                body.style.maxHeight = '0px'
-                body.style.opacity = '0'
-                body.setAttribute('aria-hidden', 'true')
-              })
-            }
-          }
-
-          const closeAll = () => {
-            accordionItems.forEach((entry) => {
-              const entryBody = entry.querySelector('.accordion-body')
-              const trigger = entry.querySelector('.accordion-header')
-              entry.classList.remove('open')
-              if (trigger) {
-                trigger.setAttribute('aria-expanded', 'false')
-              }
-              setBodyState(entryBody, false)
+              body.setAttribute('aria-hidden', 'true')
             })
           }
 
-          accordionItems.forEach((item) => {
-            const header = item.querySelector('.accordion-header')
-            const body = item.querySelector('.accordion-body')
+          headers.forEach((header) => {
+            const targetId = header.getAttribute('data-target')
+            const targetBody = targetId ? document.getElementById(targetId) : null
 
-            if (!header || !body) {
-              return
+            header.setAttribute('aria-expanded', 'false')
+            if (targetBody) {
+              targetBody.style.maxHeight = '0px'
+              targetBody.setAttribute('aria-hidden', 'true')
             }
 
-            setBodyState(body, false)
-            header.setAttribute('aria-expanded', 'false')
-
             header.addEventListener('click', () => {
-              const isOpen = item.classList.contains('open')
+              if (!targetBody) return
+              const isOpen = targetBody.classList.contains('open')
 
               if (isOpen) {
-                item.classList.remove('open')
-                header.setAttribute('aria-expanded', 'false')
-                setBodyState(body, false)
+                resetAll()
                 return
               }
 
-              closeAll()
-              item.classList.add('open')
+              resetAll()
+
+              const row = header.closest('.accordion-row')
+              if (row) {
+                row.classList.add('row-open')
+              }
+
+              const targetHeight = targetBody.scrollHeight
+              targetBody.style.maxHeight = '0px'
+
+              requestAnimationFrame(() => {
+                targetBody.classList.add('open')
+                targetBody.style.maxHeight = `${targetHeight}px`
+                targetBody.setAttribute('aria-hidden', 'false')
+              })
+
+              header.classList.add('is-open')
               header.setAttribute('aria-expanded', 'true')
-              setBodyState(body, true)
               scrollToHeader(header)
             })
+          })
 
+          bodies.forEach((body) => {
             body.addEventListener('transitionend', (event) => {
               if (event.propertyName === 'max-height') {
-                if (item.classList.contains('open')) {
+                if (body.classList.contains('open')) {
                   body.style.maxHeight = 'none'
                 } else {
                   body.style.maxHeight = '0px'
-                  body.style.opacity = '0'
                 }
               }
             })
           })
 
           window.addEventListener('resize', () => {
-            const openBody = document.querySelector('.accordion-item.open .accordion-body')
+            const openBody = document.querySelector('.accordion-body-panel.open')
             if (openBody) {
               openBody.style.maxHeight = `${openBody.scrollHeight}px`
             }
