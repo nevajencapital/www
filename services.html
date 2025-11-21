@@ -307,24 +307,68 @@
         document.addEventListener('DOMContentLoaded', () => {
           const accordionItems = Array.from(document.querySelectorAll('.accordion-item'))
 
+          const setBodyState = (body, isOpen) => {
+            if (!body) return
+            if (isOpen) {
+              body.classList.add('open')
+              body.style.maxHeight = `${body.scrollHeight}px`
+            } else {
+              body.classList.remove('open')
+              body.style.maxHeight = '0px'
+            }
+          }
+
+          const closeAll = () => {
+            accordionItems.forEach((entry) => {
+              const entryBody = entry.querySelector('.accordion-body')
+              const trigger = entry.querySelector('.accordion-header')
+              entry.classList.remove('open')
+              if (trigger) {
+                trigger.setAttribute('aria-expanded', 'false')
+              }
+              setBodyState(entryBody, false)
+            })
+          }
+
           accordionItems.forEach((item) => {
             const header = item.querySelector('.accordion-header')
+            const body = item.querySelector('.accordion-body')
+
+            if (!header || !body) {
+              return
+            }
+
+            setBodyState(body, item.classList.contains('open'))
+            header.setAttribute('aria-expanded', item.classList.contains('open') ? 'true' : 'false')
+
             header.addEventListener('click', () => {
-              if (item.classList.contains('open')) {
+              const isOpen = item.classList.contains('open')
+
+              if (isOpen) {
+                item.classList.remove('open')
+                header.setAttribute('aria-expanded', 'false')
+                setBodyState(body, false)
                 return
               }
 
-              accordionItems.forEach((entry) => {
-                entry.classList.remove('open')
-                const trigger = entry.querySelector('.accordion-header')
-                if (trigger) {
-                  trigger.setAttribute('aria-expanded', 'false')
-                }
-              })
-
+              closeAll()
               item.classList.add('open')
               header.setAttribute('aria-expanded', 'true')
+              setBodyState(body, true)
             })
+
+            body.addEventListener('transitionend', (event) => {
+              if (event.propertyName === 'max-height' && !item.classList.contains('open')) {
+                body.style.maxHeight = '0px'
+              }
+            })
+          })
+
+          window.addEventListener('resize', () => {
+            const openBody = document.querySelector('.accordion-item.open .accordion-body')
+            if (openBody) {
+              openBody.style.maxHeight = `${openBody.scrollHeight}px`
+            }
           })
         })
         </script>
