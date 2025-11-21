@@ -329,6 +329,7 @@
           const headers = Array.from(document.querySelectorAll('.accordion-header'))
           const bodies = Array.from(document.querySelectorAll('.accordion-body-panel'))
           const rows = Array.from(document.querySelectorAll('.accordion-row'))
+          const grid = document.querySelector('.services-accordion-grid')
 
           const scrollToHeader = (header) => {
             if (!header) return
@@ -353,6 +354,10 @@
               body.style.maxHeight = '0px'
               body.setAttribute('aria-hidden', 'true')
             })
+
+            if (grid) {
+              grid.classList.remove('has-open')
+            }
           }
 
           headers.forEach((header) => {
@@ -379,6 +384,10 @@
               const row = header.closest('.accordion-row')
               if (row) {
                 row.classList.add('row-open')
+              }
+
+              if (grid) {
+                grid.classList.add('has-open')
               }
 
               const targetHeight = targetBody.scrollHeight

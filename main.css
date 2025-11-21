@@ -582,6 +582,7 @@ body.services-page .badge i {
   color: var(--gold);
 }
 
+
 .services-accordion-grid {
   display: flex;
   flex-direction: column;
@@ -605,18 +606,30 @@ body.services-page .badge i {
   width: 100%;
   border: none;
   outline: none;
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 8px;
   align-items: flex-start;
-  background: linear-gradient(180deg, #192638 0%, #243449 50%, #0D1620 90%);
   padding: 24px;
   color: #FFFFFF;
   cursor: pointer;
   text-align: left;
   border-radius: 16px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
-  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  border: 2px solid transparent;
+  overflow: hidden;
+  transition: box-shadow 0.2s ease, transform 0.2s ease, border-color 0.15s ease-out;
+}
+
+.accordion-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, #192638 0%, #243449 50%, #0D1620 90%);
+  border-radius: 16px;
+  transition: filter 0.15s ease-out, opacity 0.15s ease-out;
+  z-index: 0;
 }
 
 .accordion-header:hover {
@@ -652,6 +665,8 @@ body.services-page .badge i {
   font-size: 1.24rem;
   color: #FFFFFF;
   font-weight: 800;
+  position: relative;
+  z-index: 1;
 }
 
 .accordion-short {
@@ -659,6 +674,8 @@ body.services-page .badge i {
   color: #DDE4E9;
   font-size: 0.95rem;
   line-height: 1.55;
+  position: relative;
+  z-index: 1;
 }
 
 .accordion-arrow {
@@ -671,15 +688,27 @@ body.services-page .badge i {
   color: var(--gold);
   font-size: 1rem;
   transition: transform 0.25s ease, color 0.25s ease;
-  align-self: flex-end;
+  align-self: flex-start;
+  position: relative;
+  z-index: 1;
+}
+
+.accordion-badge,
+.accordion-arrow,
+.accordion-header h3,
+.accordion-short {
+  position: relative;
+  z-index: 1;
 }
 
 .accordion-row-lip {
   grid-column: 1 / -1;
   height: 0;
-  background: linear-gradient(180deg, #192638 0%, #243449 50%, #0D1620 90%);
-  border-radius: 16px 16px 0 0;
-  transition: height 0.25s ease;
+  background: var(--gold);
+  border-radius: 0;
+  opacity: 0;
+  transform: translateY(-6px);
+  transition: height 0.15s ease, opacity 0.15s ease, transform 0.15s ease;
 }
 
 .accordion-body-panel {
@@ -757,6 +786,8 @@ body.services-page .badge i {
 
 .accordion-row.row-open .accordion-row-lip {
   height: 8px;
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .accordion-body-panel.open {
@@ -767,6 +798,19 @@ body.services-page .badge i {
 
 .accordion-header.is-open .accordion-arrow {
   transform: rotate(180deg);
+}
+
+.accordion-header.is-open {
+  border-color: var(--gold);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.28);
+}
+
+.accordion-header.is-open::before {
+  filter: brightness(1.25);
+}
+
+.services-accordion-grid.has-open .accordion-header:not(.is-open)::before {
+  opacity: 0.9;
 }
 
 body.services-page .divider {
