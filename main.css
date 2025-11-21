@@ -476,7 +476,7 @@ body.services-page .badge i {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   column-gap: 1rem;
-  row-gap: 0.35rem;
+  row-gap: 0;
 }
 
 .accordion-item {
@@ -493,7 +493,7 @@ body.services-page .badge i {
   gap: 0.4rem;
   align-items: flex-start;
   background: var(--blue);
-  padding: 1.1rem 1.3rem 1rem;
+  padding: 1.15rem 1.35rem 1.05rem;
   color: var(--white);
   cursor: pointer;
   text-align: left;
@@ -547,16 +547,16 @@ body.services-page .badge i {
   justify-content: center;
   width: 1.4rem;
   height: 1.4rem;
-  color: var(--white);
+  color: var(--gold);
   font-size: 1rem;
-  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, color 0.2s ease;
   align-self: flex-end;
 }
 
 .accordion-row-divider {
   grid-column: 1 / -1;
   height: 0;
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.14);
   opacity: 0;
   transition: opacity 0.25s ease;
 }
@@ -564,13 +564,13 @@ body.services-page .badge i {
 .accordion-body-panel {
   grid-column: 1 / -1;
   background: var(--blue);
-  padding: 0 1.3rem;
+  padding: 0 1.5rem;
   overflow: hidden;
   max-height: 0;
   opacity: 0;
-  border-radius: 0 0 16px 16px;
+  border-radius: 16px;
   position: relative;
-  transition: max-height 0.32s ease, opacity 0.32s ease, padding 0.32s ease;
+  transition: max-height 0.28s ease, opacity 0.28s ease, padding 0.28s ease;
 }
 
 .accordion-body-panel::before {
@@ -579,15 +579,16 @@ body.services-page .badge i {
   left: 0;
   right: 0;
   top: 0;
-  height: 18px;
-  background: linear-gradient(180deg, rgba(35, 52, 70, 0.4), rgba(35, 52, 70, 0));
+  height: 5px;
+  background: var(--gold);
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.25s ease;
   pointer-events: none;
+  border-radius: 16px 16px 0 0;
 }
 
 .accordion-body-panel .accordion-body {
-  padding: 1.05rem 0 1.15rem;
+  padding: 1.2rem 0 1.25rem;
 }
 
 .accordion-body h4 {
@@ -649,13 +650,22 @@ body.services-page .badge i {
 }
 
 .accordion-body-panel.open {
-  padding: 1.05rem 1.3rem 1.15rem;
+  padding: 1.2rem 1.5rem 1.3rem;
   opacity: 1;
   overflow: visible;
 }
 
 .accordion-body-panel.open::before {
   opacity: 1;
+}
+
+.accordion-row.row-open .accordion-header {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.accordion-row.row-open .accordion-body-panel {
+  border-radius: 16px;
 }
 
 .accordion-header.is-open .accordion-arrow {
